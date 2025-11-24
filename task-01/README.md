@@ -1,7 +1,7 @@
-**Запускам CMS Wordpress на Ubuntu 24.04 (Angie + PHP-FPM)**
+## Запускам CMS Wordpress на Ubuntu 24.04 (Angie + PHP-FPM)
 
 
-*Установим Angie**
+**Установим Angie**
 [Официальная документацияю. Пакетная установка Angie](https://angie.software/angie/docs/installation/oss_packages/#angie-install-deb-oss)
 
 1) Установите вспомогательные пакеты для подключения репозитория Angie:
