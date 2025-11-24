@@ -1,7 +1,7 @@
 # Landing по курсу «Administrator Linux»
 
 - [Задача № 1 — «Запускам CMS Wordpress на Ubuntu 24.04 (Angie + PHP-FPM)»](task-01)
-- [Задача № 2 — «»](task-02)
+- [Задача № 2 — «MySQL Репликация»](task-02)
 - [Задача № 3 — «»](task-03)
 - [Задача № 4 — «»](task-04)
 - [Задача № 5 — «»](task-05)
