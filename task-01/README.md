@@ -57,7 +57,71 @@ LISTEN 0      511          0.0.0.0:80        0.0.0.0:*    users:(("angie",pid=21
 ```
 
 
-**Установим дополнительные пакеты (php, mysql etc):
+**Установим дополнительные пакеты (php, mysql etc):**
 ```console
  sudo apt install php8.3 php8.3-fpm php8.3-mysql mysql-server-8.0 php-curl php-gd php-intl php-mbstring php-soap php-xml php-xmlrpc php-zip
+```
+
+```console
+$ mkdir ~/tmp && cd ~/tmp && wget https://ru.wordpress.org/wordpress-6.8.3-ru_RU.tar.gz
+
+$ tar -xvf ./wordpress-6.8.3-ru_RU.tar.gz
+
+$ sudo mkdir -p /var/www/html/
+
+funt1k@http:/var/www/html/wordpress$ ls -la
+total 252
+drwxr-xr-x  5 root root  4096 Nov 24 13:09 .
+drwxr-xr-x  3 root root  4096 Nov 24 13:09 ..
+-rw-r--r--  1 root root   405 Nov 24 13:09 index.php
+-rw-r--r--  1 root root 19903 Nov 24 13:09 license.txt
+-rw-r--r--  1 root root 10734 Nov 24 13:09 readme.html
+-rw-r--r--  1 root root  7387 Nov 24 13:09 wp-activate.php
+drwxr-xr-x  9 root root  4096 Nov 24 13:09 wp-admin
+-rw-r--r--  1 root root   351 Nov 24 13:09 wp-blog-header.php
+-rw-r--r--  1 root root  2323 Nov 24 13:09 wp-comments-post.php
+-rw-r--r--  1 root root  4908 Nov 24 13:09 wp-config-sample.php
+drwxr-xr-x  5 root root  4096 Nov 24 13:09 wp-content
+-rw-r--r--  1 root root  5617 Nov 24 13:09 wp-cron.php
+drwxr-xr-x 30 root root 16384 Nov 24 13:09 wp-includes
+-rw-r--r--  1 root root  2502 Nov 24 13:09 wp-links-opml.php
+-rw-r--r--  1 root root  3937 Nov 24 13:09 wp-load.php
+-rw-r--r--  1 root root 51414 Nov 24 13:09 wp-login.php
+-rw-r--r--  1 root root  8727 Nov 24 13:09 wp-mail.php
+-rw-r--r--  1 root root 30081 Nov 24 13:09 wp-settings.php
+-rw-r--r--  1 root root 34516 Nov 24 13:09 wp-signup.php
+-rw-r--r--  1 root root  5102 Nov 24 13:09 wp-trackback.php
+-rw-r--r--  1 root root  3205 Nov 24 13:09 xmlrpc.php
+
+funt1k@http:~$ sudo find /var/www/html/wordpress -type d -exec chmod 755 {} \;
+
+funt1k@http:~$ ls -la /var/www/html/wordpress/
+total 252
+drwxr-xr-x  5 root root  4096 Nov 24 13:09 .
+drwxr-xr-x  3 root root  4096 Nov 24 13:09 ..
+-rw-r--r--  1 root root   405 Nov 24 13:09 index.php
+-rw-r--r--  1 root root 19903 Nov 24 13:09 license.txt
+-rw-r--r--  1 root root 10734 Nov 24 13:09 readme.html
+-rw-r--r--  1 root root  7387 Nov 24 13:09 wp-activate.php
+drwxr-xr-x  9 root root  4096 Nov 24 13:09 wp-admin
+-rw-r--r--  1 root root   351 Nov 24 13:09 wp-blog-header.php
+-rw-r--r--  1 root root  2323 Nov 24 13:09 wp-comments-post.php
+-rw-r--r--  1 root root  4908 Nov 24 13:09 wp-config-sample.php
+drwxr-xr-x  5 root root  4096 Nov 24 13:09 wp-content
+-rw-r--r--  1 root root  5617 Nov 24 13:09 wp-cron.php
+drwxr-xr-x 30 root root 16384 Nov 24 13:09 wp-includes
+-rw-r--r--  1 root root  2502 Nov 24 13:09 wp-links-opml.php
+-rw-r--r--  1 root root  3937 Nov 24 13:09 wp-load.php
+-rw-r--r--  1 root root 51414 Nov 24 13:09 wp-login.php
+-rw-r--r--  1 root root  8727 Nov 24 13:09 wp-mail.php
+-rw-r--r--  1 root root 30081 Nov 24 13:09 wp-settings.php
+-rw-r--r--  1 root root 34516 Nov 24 13:09 wp-signup.php
+-rw-r--r--  1 root root  5102 Nov 24 13:09 wp-trackback.php
+-rw-r--r--  1 root root  3205 Nov 24 13:09 xmlrpc.php
+
+funt1k@http:~$ sudo touch /var/www/html/wordpress/wp-config.php
+
+funt1k@http:~$ sudo chmod 640 /var/www/html/wordpress/wp-config.php
+
+funt1k@http:~$ sudo mkdir /var/www/html/wordpress/wp-content/uploads
 ```
