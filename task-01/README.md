@@ -55,3 +55,9 @@ Nov 24 12:49:27 http systemd[1]: Started angie.service - Angie - high performanc
 funt1k@http:~$ sudo ss -ntlp | grep 80
 LISTEN 0      511          0.0.0.0:80        0.0.0.0:*    users:(("angie",pid=2137,fd=6),("angie",pid=2136,fd=6),("angie",pid=2135,fd=6))
 ```
+
+
+**Установим дополнительные пакеты (php, mysql etc):
+```console
+ sudo apt install php8.3 php8.3-fpm php8.3-mysql mysql-server-8.0 php-curl php-gd php-intl php-mbstring php-soap php-xml php-xmlrpc php-zip
+```
