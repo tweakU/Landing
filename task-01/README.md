@@ -124,4 +124,14 @@ funt1k@http:~$ sudo touch /var/www/html/wordpress/wp-config.php
 funt1k@http:~$ sudo chmod 640 /var/www/html/wordpress/wp-config.php
 
 funt1k@http:~$ sudo mkdir /var/www/html/wordpress/wp-content/uploads
+
+funt1k@http:~$ sudo chown -R www-data:www-data /var/www/html/wordpress/
+
+root@http:/var/www/html/wordpress# mysql
+CREATE DATABASE wordpress_db;
+CREATE USER 'wp_user'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL ON wordpress_db.* TO 'wp_user'@'localhost';
+exit
+
+
 ```
