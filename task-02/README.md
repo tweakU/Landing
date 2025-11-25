@@ -6,7 +6,7 @@
 root@mysql-slave:~# apt install mysql-server-8.0 -y
 ```
 
-
+```console
 root@http:~# mysql
 CREATE DATABASE wordpress_db;
 CREATE USER 'wp_user'@'localhost' IDENTIFIED BY 'password';
@@ -22,3 +22,4 @@ STOP SLAVE; (to edit)
 CREATE DATABASE %db_name; (to change binlog pos)
 DROP DATABASE %db_name;
 RESET SLAVE ALL; (flush slave)
+```
