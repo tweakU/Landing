@@ -22,4 +22,8 @@ STOP SLAVE; (to edit)
 CREATE DATABASE %db_name; (to change binlog pos)
 DROP DATABASE %db_name;
 RESET SLAVE ALL; (flush slave)
+
+Debuging:
+ALTER USER 'slave'@'%' IDENTIFIED WITH mysql_native_password BY 'qwerty'; FLUSH PRIVILEGES;
+GRANT REPLICATION SLAVE, REPLICATION CLIENT ON *.* TO 'slave'@'%' IDENTIFIED BY 'qwerty'; FLUSH PRIVILEGES;
 ```
